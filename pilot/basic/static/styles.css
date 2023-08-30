@@ -1,0 +1,39 @@
+/* Buttons */
+.btn {
+    background-color: blue;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 50%;
+  }
+  
+  /* Text input fields */
+  input[type="text"], input[type="password"], select, textarea {
+    width: 50%;
+    padding: 12px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+  }
+  
+  /* Special styling for answer textarea */
+  #responseTextarea {
+    width: 50%;
+    height: 200px;
+    margin: auto;
+    display: block;
+  }
+  
+  /* Center content */
+  .center-content {
+    text-align: center;
+  }
+  
+  /* Modern fonts */
+  body {
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  

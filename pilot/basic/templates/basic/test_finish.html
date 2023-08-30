@@ -1,0 +1,14 @@
+{% extends "basic/base.html" %}
+
+{% block content %}
+<div class="container mt-5">
+    <h2>Test Completed</h2>
+    <p>Thank you for completing the test. Your responses have been recorded.</p>
+
+    <!-- Optionally display all user responses for review -->
+    {% for response in responses %}
+    <h3>{{ response.question.title }}</h3>
+    <p>{{ response.response }}</p>
+    {% endfor %}
+</div>
+{% endblock %}

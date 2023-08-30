@@ -1,0 +1,12 @@
+{% extends "basic/base.html" %}
+
+{% block content %}
+<div class="container mt-5">
+    <h2>Instructions</h2>
+    <p>... [Your instruction text goes here] ...</p>
+    <form method="post" class="form">
+        {% csrf_token %}
+        <button type="submit" class="btn btn-primary">Start Test</button>
+    </form>
+</div>
+{% endblock %}

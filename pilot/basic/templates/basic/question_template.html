@@ -1,0 +1,29 @@
+{% extends "basic/base.html" %}
+
+{% block content %}
+<div class="container mt-5">
+    <h2>{{ question.title }}</h2>
+    <p>{{ question.content }}</p>
+
+    {% if question.image %}
+    <img src="{{ question.image.url }}" alt="{{ question.title }}" class="question-image"/>
+    {% endif %}
+
+    <form method="post" id="testForm" class="form">
+        {% csrf_token %}
+        <textarea name="response" id="responseTextarea" class="form-textarea">{{ saved_response }}</textarea>
+        <button type="button" id="prevButton" class="btn">Previous</button>
+        <button type="submit" class="btn btn-primary">Next</button>
+        <button type="submit" name="submit_test" value="submit_test" class="btn btn-primary">Submit Test</button>
+    </form>
+    
+    <script>
+        const questionId = parseInt("{{ question_number }}", 10);
+        document.getElementById("prevButton").addEventListener("click", function() {
+            if (questionId > 1) {
+                window.location.href = '/test/' + (questionId - 1) + '/';
+            }
+        });
+    </script>
+</body>
+{% endblock %}
